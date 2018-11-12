@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shop</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <button id="signupButton" data-toggle="modal", data-target="#registerModal">
+        <span class="glyphicon glyphicon-user"></span>
+        <%= link_to 'Register', new_user_path, remote: true %>
+        </button>
+      <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalTitle" aria-hidden="true">
+
+ <div class="modal-dialog">
+
+    <div class="modal-content">
+
+            
+
+        <%= render 'users/register' %>
+
+                
+
+    </div>
+
+   </div>
+
+</div>
+
+</nav>
+  </body>
+</html>
